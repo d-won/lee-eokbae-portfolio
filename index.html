@@ -48,7 +48,31 @@
             <div class="about-grid">
                 <div class="about-portrait">
                     <div class="portrait-frame">
-                        <img src="images/author.jpg" alt="이억배 작가">
+                        <img id="authorPortrait" alt="이억배 작가"
+                             data-sources='[
+                                 "https://image.aladin.co.kr/author/34/34041/34041_20200820.jpg",
+                                 "https://image.aladin.co.kr/author/34/34041/34041.jpg",
+                                 "https://contents.kyobobook.co.kr/author/1000022701.jpg",
+                                 "https://cdn.imweb.me/upload/S202101215d45dcd2451ba/aa73b6dfb7e26.jpg",
+                                 "images/author.jpg"
+                             ]'>
+                        <script>
+                        (function(){
+                            var img = document.getElementById('authorPortrait');
+                            var sources = JSON.parse(img.getAttribute('data-sources'));
+                            var idx = 0;
+                            function tryNext() {
+                                if (idx >= sources.length) return;
+                                img.src = sources[idx];
+                                idx++;
+                            }
+                            img.onerror = tryNext;
+                            img.onload = function() {
+                                if (this.naturalWidth < 10) tryNext();
+                            };
+                            tryNext();
+                        })();
+                        </script>
                     </div>
                 </div>
                 <div class="about-text">

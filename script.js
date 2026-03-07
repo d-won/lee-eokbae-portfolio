@@ -10,11 +10,10 @@ const works = [
         coverColor: '#3A5A7C',
         isbn: '9791160947878',
         images: [
-            'images/onui.jpg',
-            'https://contents.kyobobook.co.kr/sih/fit-in/280x0/pdt/9791160947878.jpg',
-            'https://image.aladin.co.kr/product/22897/28/cover500/9791160947878_1.jpg',
-            'https://books.google.com/books/content?vid=isbn:9791160947878&printsec=frontcover&img=1&zoom=1',
-            'https://covers.openlibrary.org/b/isbn/9791160947878-L.jpg'
+            'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791160947878.jpg',
+            'https://image.aladin.co.kr/product/2289728/83/cover500/9791160947878_1.jpg',
+            'https://shopping-phinf.pstatic.net/main_3249084/32490842618.20221019131001.jpg',
+            'images/onui.jpg'
         ],
         shortDesc: '한국 전래동화 "해와 달이 된 오누이"를 이억배 특유의 필치로 그려낸 그림책.',
         fullDesc: '1996년에 그려 그림책 전집의 일부로 선보였던 그림을 스무 해가 지나 새로이 출간한 작품입니다. 원화의 실제 사이즈를 반영한 크고 세로가 긴 판형으로 제작하여, 청색의 번짐과 구불텅한 고목, 털 한 올 한 올이 살아있는 호랑이의 그림들이 생생합니다. 호랑이와 오누이의 입씨름, 호랑이를 이겨 먹으려는 오누이의 재치 등 이야기 속의 인간성에 집중한 작품입니다.',
@@ -31,11 +30,10 @@ const works = [
         coverColor: '#E8D5B7',
         isbn: '9788986621198',
         images: [
-            'images/chuseok.jpg',
-            'https://contents.kyobobook.co.kr/sih/fit-in/280x0/pdt/9788986621198.jpg',
-            'https://image.aladin.co.kr/product/8/33/cover500/8986621193_1.jpg',
-            'https://books.google.com/books/content?vid=isbn:9788986621198&printsec=frontcover&img=1&zoom=1',
-            'https://covers.openlibrary.org/b/isbn/9788986621198-L.jpg'
+            'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788986621198.jpg',
+            'https://image.aladin.co.kr/product/833/82/cover500/8986621193_1.jpg',
+            'https://shopping-phinf.pstatic.net/main_3246201/32462016622.20221019124831.jpg',
+            'images/chuseok.jpg'
         ],
         shortDesc: '도시에 사는 솔이가 추석에 시골 할머니 댁을 방문하며 겪는 따뜻한 명절 이야기.',
         fullDesc: '1993년부터 기획하여 1995년 출간한 이억배 작가의 첫 그림책입니다. 도시에 사는 솔이네 가족이 추석 명절을 지내기 위해 고향집으로 내려가는 이야기를 담고 있습니다. 원색의 그림책에 익숙해져 있는 아이들에게 한국 전통 채색화의 색과 선을 살린 정겨운 그림들을 통해 새로운 감성을 키울 수 있게 해주는 작품입니다.',
@@ -52,11 +50,10 @@ const works = [
         coverColor: '#A8C5A0',
         isbn: '9788958284918',
         images: [
-            'images/dmz.jpg',
-            'https://contents.kyobobook.co.kr/sih/fit-in/280x0/pdt/9788958284918.jpg',
-            'https://image.aladin.co.kr/product/726/73/cover500/8958284919_1.jpg',
-            'https://books.google.com/books/content?vid=isbn:9788958284918&printsec=frontcover&img=1&zoom=1',
-            'https://covers.openlibrary.org/b/isbn/9780874869729-L.jpg'
+            'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788958284918.jpg',
+            'https://image.aladin.co.kr/product/72673/08/cover500/8958284919_1.jpg',
+            'https://shopping-phinf.pstatic.net/main_3246088/32460889498.20221019142409.jpg',
+            'images/dmz.jpg'
         ],
         shortDesc: '분단의 상징 비무장지대를 소재로 한 평화 그림책. 한중일 평화그림책 프로젝트의 일환.',
         fullDesc: '한국과 중국, 일본 세 나라의 작가와 출판사가 함께 기획한 "한중일 평화그림책" 프로젝트의 일환으로 제작된 작품입니다. 비무장지대에 찾아온 봄의 풍경을 통해 한반도의 평화를 기원하는 메시지를 담고 있습니다. 영문판 When Spring Comes to the DMZ는 Plough Publishing House에서 출간되었습니다.',
@@ -73,11 +70,10 @@ const works = [
         coverColor: '#D4C4A0',
         isbn: '9788986565133',
         images: [
-            'images/rooster.jpg',
-            'https://contents.kyobobook.co.kr/sih/fit-in/280x0/pdt/9788986565133.jpg',
-            'https://image.aladin.co.kr/product/8/06/cover500/8986565137_1.jpg',
-            'https://books.google.com/books/content?vid=isbn:9788986565133&printsec=frontcover&img=1&zoom=1',
-            'https://covers.openlibrary.org/b/isbn/9788986565133-L.jpg'
+            'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788986565133.jpg',
+            'https://image.aladin.co.kr/product/806/75/cover500/8986565137_1.jpg',
+            'https://shopping-phinf.pstatic.net/main_3248889/32488896994.20221019142453.jpg',
+            'images/rooster.jpg'
         ],
         shortDesc: '세월이 흘러도 변치 않는 가족의 사랑을 힘센 수탉의 이야기로 전하는 그림책.',
         fullDesc: '이호백 글, 이억배 그림으로 만들어진 작품입니다. 아주 힘센 수평아리 한 마리가 태어나 세상에서 제일 힘센 수탉이 됩니다. 세월이 흐르며 예전만큼 힘이 세지 않다는 것을 알고 슬픔에 빠지지만, 수탉의 부인이 건강하게 자라는 손자 손녀, 힘센 아들들을 보여주며 여전히 그가 세상에서 제일 힘센 수탉임을 일깨워 줍니다.',
@@ -94,11 +90,9 @@ const works = [
         coverColor: '#C9A96E',
         isbn: '9788943307530',
         images: [
-            'images/story-pouch.jpg',
-            'https://contents.kyobobook.co.kr/sih/fit-in/280x0/pdt/9788943307530.jpg',
-            'https://image.aladin.co.kr/product/89/43/cover500/8943307533_1.jpg',
-            'https://books.google.com/books/content?vid=isbn:9788943307530&printsec=frontcover&img=1&zoom=1',
-            'https://covers.openlibrary.org/b/isbn/9788943307530-L.jpg'
+            'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788943307530.jpg',
+            'https://image.aladin.co.kr/product/89/43/cover500/8943307535_1.jpg',
+            'images/story-pouch.jpg'
         ],
         shortDesc: '겨레의 삶과 꿈이 녹아 있는 옛이야기를 담은 그림책.',
         fullDesc: '보림 출판사의 "까치호랑이" 시리즈 제19권으로, 겨레의 삶과 꿈이 녹아 있는 옛이야기 그림책입니다. 이억배 특유의 동글동글 귀여운 표정과 따스한 색채의 그림이 돋보이는 작품입니다.',
@@ -115,11 +109,9 @@ const works = [
         coverColor: '#8FB5A2',
         isbn: '9788998751425',
         images: [
-            'images/bomi.jpg',
-            'https://contents.kyobobook.co.kr/sih/fit-in/280x0/pdt/9788998751425.jpg',
-            'https://image.aladin.co.kr/product/19601/49/cover500/8998751429_1.jpg',
-            'https://books.google.com/books/content?vid=isbn:9788998751425&printsec=frontcover&img=1&zoom=1',
-            'https://covers.openlibrary.org/b/isbn/9788998751425-L.jpg'
+            'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788998751425.jpg',
+            'https://image.aladin.co.kr/product/1960149/44/cover500/8998751429_1.jpg',
+            'images/bomi.jpg'
         ],
         shortDesc: '분단의 현실 속에서 꽃 피는 한반도의 꿈을 담은 그림책.',
         fullDesc: '반세기가 지난 오늘, 화가 이억배가 여전히 슬픈 분단의 현실 속에서 또 다른 "꽃 피는 한반도의 꿈"을 꾸고, 그것을 그림책으로 옮겨 놓은 작품입니다. 평화에 대한 염원을 아이들의 눈높이에서 아름답게 표현했습니다.',
@@ -136,11 +128,9 @@ const works = [
         coverColor: '#D5C0A5',
         isbn: '9788986621952',
         images: [
-            'images/mosquito.jpg',
-            'https://contents.kyobobook.co.kr/sih/fit-in/280x0/pdt/9788986621952.jpg',
-            'https://image.aladin.co.kr/product/26/24/cover500/8986621959_1.jpg',
-            'https://books.google.com/books/content?vid=isbn:9788986621952&printsec=frontcover&img=1&zoom=1',
-            'https://covers.openlibrary.org/b/isbn/9788986621952-L.jpg'
+            'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788986621952.jpg',
+            'https://image.aladin.co.kr/product/2624/22/cover500/8986621959_1.jpg',
+            'images/mosquito.jpg'
         ],
         shortDesc: '작은 존재의 당당함을 해학적으로 그려낸 전래동화 그림책.',
         fullDesc: '농촌 현실에 대한 경험을 바탕으로 발표한 작품으로, 한국 전래동화 "모기와 황소" 이야기를 이억배 특유의 해학과 따뜻한 시선으로 재해석한 그림책입니다.',
@@ -157,11 +147,9 @@ const works = [
         coverColor: '#C5B8A5',
         isbn: '9788986621945',
         images: [
-            'images/halfboy.jpg',
-            'https://contents.kyobobook.co.kr/sih/fit-in/280x0/pdt/9788986621945.jpg',
-            'https://image.aladin.co.kr/product/55/72/cover500/8986621940_1.jpg',
-            'https://books.google.com/books/content?vid=isbn:9788986621945&printsec=frontcover&img=1&zoom=1',
-            'https://covers.openlibrary.org/b/isbn/9788986621945-L.jpg'
+            'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788986621945.jpg',
+            'https://image.aladin.co.kr/product/5572/90/cover500/8986621940_1.jpg',
+            'images/halfboy.jpg'
         ],
         shortDesc: '몸이 반쪽인 아이의 성장을 통해 자기 긍정의 메시지를 전하는 전래동화 그림책.',
         fullDesc: '한국 전래동화를 바탕으로 한 그림책입니다. 동글동글 귀여운 표정과 따스한 색채로 반쪽이의 이야기를 생동감 있게 표현했습니다. 다름을 인정하고 자기 자신을 사랑하는 메시지를 전달합니다.',
@@ -184,7 +172,8 @@ function loadImageCascade(imgEl, urls, fallbackEl) {
     }
     imgEl.onerror = tryNext;
     imgEl.onload = function() {
-        if (this.naturalWidth < 2 || this.naturalHeight < 2) {
+        // Skip tiny placeholder images (1x1 pixel etc)
+        if (this.naturalWidth < 10 || this.naturalHeight < 10) {
             tryNext();
         }
     };
