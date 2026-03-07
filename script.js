@@ -10,6 +10,7 @@ const works = [
         coverColor: '#3A5A7C',
         isbn: '9791160947878',
         images: [
+            'images/onui.jpg',
             'https://contents.kyobobook.co.kr/sih/fit-in/280x0/pdt/9791160947878.jpg',
             'https://image.aladin.co.kr/product/22897/28/cover500/9791160947878_1.jpg',
             'https://books.google.com/books/content?vid=isbn:9791160947878&printsec=frontcover&img=1&zoom=1',
@@ -30,6 +31,7 @@ const works = [
         coverColor: '#E8D5B7',
         isbn: '9788986621198',
         images: [
+            'images/chuseok.jpg',
             'https://contents.kyobobook.co.kr/sih/fit-in/280x0/pdt/9788986621198.jpg',
             'https://image.aladin.co.kr/product/8/33/cover500/8986621193_1.jpg',
             'https://books.google.com/books/content?vid=isbn:9788986621198&printsec=frontcover&img=1&zoom=1',
@@ -50,6 +52,7 @@ const works = [
         coverColor: '#A8C5A0',
         isbn: '9788958284918',
         images: [
+            'images/dmz.jpg',
             'https://contents.kyobobook.co.kr/sih/fit-in/280x0/pdt/9788958284918.jpg',
             'https://image.aladin.co.kr/product/726/73/cover500/8958284919_1.jpg',
             'https://books.google.com/books/content?vid=isbn:9788958284918&printsec=frontcover&img=1&zoom=1',
@@ -70,6 +73,7 @@ const works = [
         coverColor: '#D4C4A0',
         isbn: '9788986565133',
         images: [
+            'images/rooster.jpg',
             'https://contents.kyobobook.co.kr/sih/fit-in/280x0/pdt/9788986565133.jpg',
             'https://image.aladin.co.kr/product/8/06/cover500/8986565137_1.jpg',
             'https://books.google.com/books/content?vid=isbn:9788986565133&printsec=frontcover&img=1&zoom=1',
@@ -90,6 +94,7 @@ const works = [
         coverColor: '#C9A96E',
         isbn: '9788943307530',
         images: [
+            'images/story-pouch.jpg',
             'https://contents.kyobobook.co.kr/sih/fit-in/280x0/pdt/9788943307530.jpg',
             'https://image.aladin.co.kr/product/89/43/cover500/8943307533_1.jpg',
             'https://books.google.com/books/content?vid=isbn:9788943307530&printsec=frontcover&img=1&zoom=1',
@@ -110,6 +115,7 @@ const works = [
         coverColor: '#8FB5A2',
         isbn: '9788998751425',
         images: [
+            'images/bomi.jpg',
             'https://contents.kyobobook.co.kr/sih/fit-in/280x0/pdt/9788998751425.jpg',
             'https://image.aladin.co.kr/product/19601/49/cover500/8998751429_1.jpg',
             'https://books.google.com/books/content?vid=isbn:9788998751425&printsec=frontcover&img=1&zoom=1',
@@ -130,6 +136,7 @@ const works = [
         coverColor: '#D5C0A5',
         isbn: '9788986621952',
         images: [
+            'images/mosquito.jpg',
             'https://contents.kyobobook.co.kr/sih/fit-in/280x0/pdt/9788986621952.jpg',
             'https://image.aladin.co.kr/product/26/24/cover500/8986621959_1.jpg',
             'https://books.google.com/books/content?vid=isbn:9788986621952&printsec=frontcover&img=1&zoom=1',
@@ -150,6 +157,7 @@ const works = [
         coverColor: '#C5B8A5',
         isbn: '9788986621945',
         images: [
+            'images/halfboy.jpg',
             'https://contents.kyobobook.co.kr/sih/fit-in/280x0/pdt/9788986621945.jpg',
             'https://image.aladin.co.kr/product/55/72/cover500/8986621940_1.jpg',
             'https://books.google.com/books/content?vid=isbn:9788986621945&printsec=frontcover&img=1&zoom=1',
@@ -305,26 +313,6 @@ const revealObserver = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 revealElements.forEach(el => revealObserver.observe(el));
-
-// ---- Author portrait ----
-const authorImg = document.getElementById('authorPortrait');
-const portraitFallback = document.getElementById('portraitFallback');
-if (authorImg) {
-    authorImg.style.display = 'none';
-    portraitFallback.style.display = 'flex';
-    // Try known author image sources; fallback to placeholder if none load
-    const portraitUrls = [
-        'https://image.aladin.co.kr/author/34/34041/34041_20200820.jpg',
-        'https://contents.kyobobook.co.kr/author/1000009613.jpg'
-    ];
-    loadImageCascade(authorImg, portraitUrls, portraitFallback);
-    authorImg.addEventListener('load', function() {
-        if (this.naturalWidth > 2) {
-            this.style.display = 'block';
-            portraitFallback.style.display = 'none';
-        }
-    });
-}
 
 // ---- Smooth scroll ----
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
