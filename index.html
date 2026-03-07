@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이억배 - 그림책 작가 포트폴리오</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+:root {
+    --color-bg: #FAF6F0;
+    --color-bg-warm: #F5EDE0;
+    --color-ink: #2C2420;
+    --color-ink-light: #5A4E45;
+    --color-accent: #8B4513;
+    --color-accent-light: #C4956A;
+    --color-hanji: #F0E6D3;
+    --color-dancheong: #C23B22;
+    --color-celadon: #6B8E7B;
+    --color-indigo: #3F5277;
+    --color-gold: #B8963E;
+    --color-border: #D5C9B8;
+    --font-serif: 'Noto Serif KR', serif;
+    --font-sans: 'Noto Sans KR', sans-serif;
+    --transition: 0.3s ease;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body { font-family: var(--font-sans); background-color: var(--color-bg); color: var(--color-ink); line-height: 1.8; overflow-x: hidden; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+#navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1rem 0; transition: background var(--transition), box-shadow var(--transition), padding var(--transition); }
+#navbar.scrolled { background: rgba(250, 246, 240, 0.95); backdrop-filter: blur(10px); box-shadow: 0 2px 20px rgba(0,0,0,0.08); padding: 0.6rem 0; }
+.nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+.nav-logo { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 900; color: var(--color-ink); text-decoration: none; letter-spacing: 0.05em; }
+.nav-links { display: flex; list-style: none; gap: 2.5rem; }
+.nav-links a { text-decoration: none; color: var(--color-ink-light); font-size: 0.9rem; font-weight: 500; letter-spacing: 0.05em; position: relative; transition: color var(--transition); }
+.nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--color-accent); transition: width var(--transition); }
+.nav-links a:hover { color: var(--color-accent); }
+.nav-links a:hover::after { width: 100%; }
+.nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 5px; }
+.nav-toggle span { display: block; width: 24px; height: 2px; background: var(--color-ink); transition: var(--transition); }
+
+#hero { position: relative; height: 100vh; min-height: 600px; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse at 20% 50%, rgba(196,149,106,0.15) 0%, transparent 60%), radial-gradient(ellipse at 80% 30%, rgba(107,142,123,0.1) 0%, transparent 50%), radial-gradient(ellipse at 50% 80%, rgba(63,82,119,0.08) 0%, transparent 50%); background-color: var(--color-bg); }
+.hero-bg::before { content: ''; position: absolute; inset: 0; background-image: repeating-linear-gradient(90deg, transparent, transparent 80px, rgba(213,201,184,0.3) 80px, rgba(213,201,184,0.3) 81px); opacity: 0.4; }
+.hero-content { position: relative; z-index: 1; }
+.hero-subtitle { font-family: var(--font-sans); font-size: 0.9rem; font-weight: 500; letter-spacing: 0.3em; color: var(--color-accent); margin-bottom: 1.5rem; text-transform: uppercase; opacity: 0; transform: translateY(20px); animation: fadeInUp 0.8s ease 0.3s forwards; }
+.hero-title { font-family: var(--font-serif); font-size: clamp(3.5rem, 10vw, 8rem); font-weight: 900; color: var(--color-ink); line-height: 1.1; margin-bottom: 1.5rem; opacity: 0; transform: translateY(30px); animation: fadeInUp 0.8s ease 0.5s forwards; }
+.hero-desc { font-size: 1.1rem; color: var(--color-ink-light); line-height: 2; margin-bottom: 2.5rem; opacity: 0; transform: translateY(20px); animation: fadeInUp 0.8s ease 0.7s forwards; }
+.hero-cta { display: inline-block; padding: 0.9rem 2.5rem; background: var(--color-ink); color: var(--color-bg); text-decoration: none; font-size: 0.9rem; font-weight: 500; letter-spacing: 0.1em; border-radius: 2px; transition: background var(--transition), transform var(--transition); opacity: 0; transform: translateY(20px); animation: fadeInUp 0.8s ease 0.9s forwards; }
+.hero-cta:hover { background: var(--color-accent); transform: translateY(-2px); }
+.scroll-indicator { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 0.5rem; opacity: 0; animation: fadeInUp 0.8s ease 1.2s forwards; }
+.scroll-indicator span { font-size: 0.75rem; color: var(--color-ink-light); letter-spacing: 0.15em; }
+.scroll-arrow { width: 1px; height: 40px; background: linear-gradient(to bottom, var(--color-accent), transparent); animation: scrollPulse 2s ease infinite; }
+
+section { padding: 7rem 0; }
+.section-header { text-align: center; margin-bottom: 4rem; }
+.section-label { display: block; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.25em; color: var(--color-accent); text-transform: uppercase; margin-bottom: 0.8rem; }
+.section-title { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--color-ink); }
+.section-title::after { content: ''; display: block; width: 40px; height: 3px; background: var(--color-accent); margin: 1rem auto 0; }
+
+#about { background: var(--color-bg-warm); }
+.about-grid { display: grid; grid-template-columns: 350px 1fr; gap: 4rem; align-items: start; }
+.portrait-frame { position: relative; aspect-ratio: 3/4; border: 1px solid var(--color-border); padding: 1rem; background: var(--color-bg); }
+.portrait-frame::before { content: ''; position: absolute; top: 8px; left: 8px; right: 8px; bottom: 8px; border: 1px solid var(--color-border); }
+.portrait-placeholder { width: 100%; height: 100%; background: linear-gradient(135deg, var(--color-hanji), var(--color-bg-warm)); display: flex; align-items: center; justify-content: center; font-family: var(--font-serif); color: var(--color-ink-light); font-size: 1rem; }
+.about-lead { font-family: var(--font-serif); font-size: 1.2rem; line-height: 2; color: var(--color-ink); margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--color-border); }
+.about-text p { margin-bottom: 1rem; color: var(--color-ink-light); font-size: 0.95rem; }
+.about-stats { display: flex; gap: 3rem; margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--color-border); }
+.stat { display: flex; flex-direction: column; }
+.stat-number { font-family: var(--font-serif); font-size: 2.5rem; font-weight: 700; color: var(--color-accent); line-height: 1; }
+.stat-label { font-size: 0.85rem; color: var(--color-ink-light); margin-top: 0.3rem; }
+
+.works-filter { display: flex; justify-content: center; gap: 1rem; margin-bottom: 3rem; flex-wrap: wrap; }
+.filter-btn { padding: 0.5rem 1.5rem; background: none; border: 1px solid var(--color-border); font-family: var(--font-sans); font-size: 0.85rem; color: var(--color-ink-light); cursor: pointer; transition: all var(--transition); border-radius: 2px; }
+.filter-btn:hover, .filter-btn.active { background: var(--color-ink); color: var(--color-bg); border-color: var(--color-ink); }
+.works-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem; }
+.work-card { background: white; border: 1px solid var(--color-border); overflow: hidden; transition: transform var(--transition), box-shadow var(--transition); cursor: pointer; }
+.work-card:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(44,36,32,0.1); }
+.work-card.hidden { display: none; }
+.work-image { position: relative; aspect-ratio: 4/3; overflow: hidden; }
+.work-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-family: var(--font-serif); font-size: 1.1rem; color: var(--color-ink-light); transition: transform 0.6s ease; }
+.work-card:hover .work-placeholder { transform: scale(1.05); }
+.work-overlay { position: absolute; top: 1rem; right: 1rem; opacity: 0; transition: opacity var(--transition); }
+.work-card:hover .work-overlay { opacity: 1; }
+.work-year { background: rgba(44,36,32,0.85); color: var(--color-bg); padding: 0.3rem 0.8rem; font-size: 0.8rem; letter-spacing: 0.05em; }
+.work-info { padding: 1.5rem; }
+.work-info h3 { font-family: var(--font-serif); font-size: 1.15rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--color-ink); }
+.work-info p { font-size: 0.85rem; color: var(--color-ink-light); line-height: 1.7; margin-bottom: 1rem; }
+.work-tag { display: inline-block; font-size: 0.75rem; padding: 0.2rem 0.8rem; background: var(--color-bg-warm); color: var(--color-accent); border-radius: 2px; letter-spacing: 0.05em; }
+
+#awards { background: var(--color-bg-warm); }
+.timeline { position: relative; max-width: 700px; margin: 0 auto; padding-left: 3rem; }
+.timeline::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 1px; background: var(--color-border); }
+.timeline-item { position: relative; padding-bottom: 3rem; }
+.timeline-item::before { content: ''; position: absolute; left: -3rem; top: 0.3rem; width: 9px; height: 9px; border-radius: 50%; background: var(--color-accent); transform: translateX(-4px); }
+.timeline-year { font-family: var(--font-serif); font-size: 0.85rem; font-weight: 700; color: var(--color-accent); letter-spacing: 0.1em; margin-bottom: 0.3rem; }
+.timeline-content h3 { font-family: var(--font-serif); font-size: 1.1rem; font-weight: 700; color: var(--color-ink); margin-bottom: 0.3rem; }
+.timeline-content p { font-size: 0.9rem; color: var(--color-ink-light); }
+
+.contact-desc { text-align: center; font-size: 1.05rem; color: var(--color-ink-light); margin-bottom: 3rem; }
+.contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.contact-card { text-align: center; padding: 2.5rem 1.5rem; background: var(--color-bg-warm); border: 1px solid var(--color-border); transition: transform var(--transition); }
+.contact-card:hover { transform: translateY(-3px); }
+.contact-icon { font-size: 1.8rem; margin-bottom: 1rem; color: var(--color-accent); }
+.contact-card h3 { font-family: var(--font-serif); font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--color-ink); }
+.contact-card p { font-size: 0.9rem; color: var(--color-ink-light); line-height: 1.6; }
+
+footer { padding: 2rem 0; text-align: center; border-top: 1px solid var(--color-border); }
+footer p { font-size: 0.8rem; color: var(--color-ink-light); letter-spacing: 0.05em; }
+
+@keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+@keyframes scrollPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 968px) {
+    .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .about-portrait { max-width: 300px; margin: 0 auto; }
+}
+@media (max-width: 768px) {
+    .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; background: rgba(250,246,240,0.98); padding: 1.5rem 2rem; gap: 1.2rem; border-bottom: 1px solid var(--color-border); }
+    .nav-links.open { display: flex; }
+    .nav-toggle { display: flex; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .about-stats { gap: 2rem; }
+    .works-grid { grid-template-columns: 1fr 1fr; }
+    section { padding: 5rem 0; }
+}
+@media (max-width: 480px) {
+    .works-grid { grid-template-columns: 1fr; }
+    .about-stats { flex-wrap: wrap; }
+    .hero-desc br { display: none; }
+}
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-logo">이억배</a>
+            <ul class="nav-links">
+                <li><a href="#about">소개</a></li>
+                <li><a href="#works">대표작</a></li>
+                <li><a href="#awards">수상</a></li>
+                <li><a href="#contact">연락처</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="메뉴 열기">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <p class="hero-subtitle">그림책 작가</p>
+            <h1 class="hero-title">이억배</h1>
+            <p class="hero-desc">한국의 전통과 아이들의 일상을<br>따뜻한 붓끝으로 그려내는 작가</p>
+            <a href="#works" class="hero-cta">작품 보기</a>
+        </div>
+        <div class="scroll-indicator">
+            <span>아래로 스크롤</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">About</span>
+                <h2 class="section-title">작가 소개</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-portrait">
+                    <div class="portrait-frame">
+                        <div class="portrait-placeholder">
+                            <span>작가 사진</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p class="about-lead">
+                        이억배는 한국의 전통 문화와 자연, 그리고 아이들의 삶을
+                        섬세하고 따뜻한 시선으로 그려내는 대한민국 대표 그림책 작가입니다.
+                    </p>
+                    <p>
+                        홍익대학교 동양화과를 졸업한 후, 한국 전통 회화의 기법을
+                        그림책에 접목시키며 독자적인 작품 세계를 구축해 왔습니다.
+                        먹과 채색을 활용한 그의 그림은 한국적인 아름다움과
+                        현대적 감성을 동시에 담아내고 있습니다.
+                    </p>
+                    <p>
+                        대표작 《솔이의 추석이야기》를 비롯하여 다수의 작품이
+                        국내외에서 사랑받고 있으며, 볼로냐 국제아동도서전 등
+                        세계적인 무대에서도 한국 그림책의 아름다움을 알려왔습니다.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">30+</span>
+                            <span class="stat-label">출판 작품</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">수상 경력</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">30+</span>
+                            <span class="stat-label">작가 활동 (년)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Works</span>
+                <h2 class="section-title">대표 작품</h2>
+            </div>
+            <div class="works-filter">
+                <button class="filter-btn active" data-filter="all">전체</button>
+                <button class="filter-btn" data-filter="tradition">전통·문화</button>
+                <button class="filter-btn" data-filter="nature">자연·생명</button>
+                <button class="filter-btn" data-filter="history">역사·사회</button>
+            </div>
+            <div class="works-grid">
+                <div class="work-card" data-category="tradition">
+                    <div class="work-image">
+                        <div class="work-placeholder" style="background-color: #E8D5B7;"><span>솔이의 추석이야기</span></div>
+                        <div class="work-overlay"><span class="work-year">1995</span></div>
+                    </div>
+                    <div class="work-info">
+                        <h3>솔이의 추석이야기</h3>
+                        <p>한국의 대표 명절 추석을 배경으로, 도시에 사는 솔이가 시골 할머니 댁을 방문하며 겪는 따뜻한 이야기. 한국 전통 명절의 풍습과 정서를 아름답게 담아낸 작품.</p>
+                        <span class="work-tag">전통·문화</span>
+                    </div>
+                </div>
+                <div class="work-card" data-category="nature">
+                    <div class="work-image">
+                        <div class="work-placeholder" style="background-color: #C5D5A5;"><span>세상에서 제일 힘센 수탉</span></div>
+                        <div class="work-overlay"><span class="work-year">1997</span></div>
+                    </div>
+                    <div class="work-info">
+                        <h3>세상에서 제일 힘센 수탉</h3>
+                        <p>시골 마을의 수탉을 주인공으로, 자연 속 동물들의 삶과 생명력을 역동적으로 표현한 그림책. 힘차고 활기찬 그림체가 돋보이는 작품.</p>
+                        <span class="work-tag">자연·생명</span>
+                    </div>
+                </div>
+                <div class="work-card" data-category="tradition">
+                    <div class="work-image">
+                        <div class="work-placeholder" style="background-color: #D5C5B0;"><span>비나리 달이네 집</span></div>
+                        <div class="work-overlay"><span class="work-year">2007</span></div>
+                    </div>
+                    <div class="work-info">
+                        <h3>비나리 달이네 집</h3>
+                        <p>아이의 탄생을 축복하는 한국 전통 비나리(축원)를 담은 그림책. 전통적 소재를 현대적 감성으로 재해석한 아름다운 작품.</p>
+                        <span class="work-tag">전통·문화</span>
+                    </div>
+                </div>
+                <div class="work-card" data-category="history">
+                    <div class="work-image">
+                        <div class="work-placeholder" style="background-color: #B0C4D5;"><span>반쪽이</span></div>
+                        <div class="work-overlay"><span class="work-year">2005</span></div>
+                    </div>
+                    <div class="work-info">
+                        <h3>반쪽이</h3>
+                        <p>한국 전래동화를 바탕으로 한 그림책. 몸이 반쪽인 아이가 온전한 존재로 성장해가는 이야기를 통해 자기 긍정의 메시지를 전달.</p>
+                        <span class="work-tag">역사·사회</span>
+                    </div>
+                </div>
+                <div class="work-card" data-category="nature">
+                    <div class="work-image">
+                        <div class="work-placeholder" style="background-color: #D5E5C5;"><span>개구리네 한솥밥</span></div>
+                        <div class="work-overlay"><span class="work-year">2002</span></div>
+                    </div>
+                    <div class="work-info">
+                        <h3>개구리네 한솥밥</h3>
+                        <p>논에 사는 개구리의 시선으로 바라본 농촌의 사계절. 자연과 더불어 사는 삶의 소중함을 섬세한 그림으로 표현한 작품.</p>
+                        <span class="work-tag">자연·생명</span>
+                    </div>
+                </div>
+                <div class="work-card" data-category="history">
+                    <div class="work-image">
+                        <div class="work-placeholder" style="background-color: #C5B5A5;"><span>나의 사직동</span></div>
+                        <div class="work-overlay"><span class="work-year">2016</span></div>
+                    </div>
+                    <div class="work-info">
+                        <h3>나의 사직동</h3>
+                        <p>작가의 어린 시절 추억이 담긴 사직동의 풍경을 그린 자전적 그림책. 사라져가는 동네의 모습과 그 안의 따뜻한 기억을 담아낸 작품.</p>
+                        <span class="work-tag">역사·사회</span>
+                    </div>
+                </div>
+                <div class="work-card" data-category="tradition">
+                    <div class="work-image">
+                        <div class="work-placeholder" style="background-color: #E5D5C0;"><span>솔이의 설날이야기</span></div>
+                        <div class="work-overlay"><span class="work-year">2000</span></div>
+                    </div>
+                    <div class="work-info">
+                        <h3>솔이의 설날이야기</h3>
+                        <p>《솔이의 추석이야기》의 후속작으로, 한국의 설날 풍습을 솔이의 눈을 통해 생생하게 보여주는 그림책.</p>
+                        <span class="work-tag">전통·문화</span>
+                    </div>
+                </div>
+                <div class="work-card" data-category="history">
+                    <div class="work-image">
+                        <div class="work-placeholder" style="background-color: #B5C5D0;"><span>이야기 인형</span></div>
+                        <div class="work-overlay"><span class="work-year">2010</span></div>
+                    </div>
+                    <div class="work-info">
+                        <h3>이야기 인형</h3>
+                        <p>이야기의 힘과 전통의 계승에 대한 메시지를 담은 작품. 할머니에서 손녀로 이어지는 이야기의 소중함을 표현.</p>
+                        <span class="work-tag">역사·사회</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="awards">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Awards</span>
+                <h2 class="section-title">수상 및 경력</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">2016</div>
+                    <div class="timeline-content"><h3>《나의 사직동》 출간</h3><p>자전적 그림책으로 독자들의 큰 사랑을 받음</p></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2007</div>
+                    <div class="timeline-content"><h3>《비나리 달이네 집》 출간</h3><p>한국 전통 축원의 아름다움을 그림책으로 재해석</p></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2005</div>
+                    <div class="timeline-content"><h3>볼로냐 국제아동도서전 선정</h3><p>한국 그림책의 우수성을 세계에 알림</p></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2002</div>
+                    <div class="timeline-content"><h3>《개구리네 한솥밥》 출간</h3><p>환경과 자연을 주제로 한 대표작</p></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1997</div>
+                    <div class="timeline-content"><h3>한국출판문화상 수상</h3><p>그림책 분야의 우수성을 인정받아 수상</p></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1995</div>
+                    <div class="timeline-content"><h3>《솔이의 추석이야기》 출간</h3><p>한국 그림책의 새 지평을 연 대표작 발표</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Contact</span>
+                <h2 class="section-title">연락처</h2>
+            </div>
+            <div class="contact-content">
+                <p class="contact-desc">전시, 강연, 협업 등의 문의는 아래로 연락해 주세요.</p>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <div class="contact-icon">&#9993;</div>
+                        <h3>이메일</h3>
+                        <p>contact@leeeokbae.com</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">&#9742;</div>
+                        <h3>출판사</h3>
+                        <p>길벗어린이<br>02-XXX-XXXX</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">&#9998;</div>
+                        <h3>작업실</h3>
+                        <p>서울특별시</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 이억배 — 그림책 작가 포트폴리오</p>
+        </div>
+    </footer>
+
+    <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 50); });
+
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    navToggle.addEventListener('click', () => { navLinks.classList.toggle('open'); });
+    navLinks.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { navLinks.classList.remove('open'); }); });
+
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const workCards = document.querySelectorAll('.work-card');
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const filter = btn.dataset.filter;
+            workCards.forEach(card => {
+                if (filter === 'all' || card.dataset.category === filter) { card.classList.remove('hidden'); }
+                else { card.classList.add('hidden'); }
+            });
+        });
+    });
+
+    const revealElements = document.querySelectorAll('.work-card, .timeline-item, .contact-card, .about-grid, .section-header');
+    revealElements.forEach(el => el.classList.add('reveal'));
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', (e) => { e.preventDefault(); const target = document.querySelector(anchor.getAttribute('href')); if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); } });
+    });
+    </script>
+</body>
+</html>
