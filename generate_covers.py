@@ -13,25 +13,19 @@ W, H = 400, 533  # 3:4 aspect ratio
 
 # Korean traditional colors
 COLORS = {
-    'onui': {'bg': '#1B3A5C', 'accent': '#D4A852', 'text': '#F0E6D3', 'sub': '#7BA3C9'},
-    'chuseok': {'bg': '#E8D5B7', 'accent': '#8B4513', 'text': '#3C2A1A', 'sub': '#C4956A'},
-    'dmz': {'bg': '#4A7A5A', 'accent': '#E8D5B7', 'text': '#FFFFFF', 'sub': '#A8C5A0'},
-    'rooster': {'bg': '#D4C4A0', 'accent': '#8B2500', 'text': '#2C2420', 'sub': '#C4956A'},
-    'story-pouch': {'bg': '#C9A96E', 'accent': '#5A3E2B', 'text': '#2C2420', 'sub': '#E8D5B7'},
     'bomi': {'bg': '#6B9080', 'accent': '#F0E6D3', 'text': '#FFFFFF', 'sub': '#A8C5A0'},
-    'mosquito': {'bg': '#D5C0A5', 'accent': '#5A3E2B', 'text': '#2C2420', 'sub': '#8B6914'},
     'halfboy': {'bg': '#B8A590', 'accent': '#3C6E47', 'text': '#2C2420', 'sub': '#E8D5B7'},
+    'jaljaljal': {'bg': '#E8D5B7', 'accent': '#8B4513', 'text': '#3C2A1A', 'sub': '#C4956A'},
+    'gaegujangi': {'bg': '#5A8A9A', 'accent': '#F0E6D3', 'text': '#FFFFFF', 'sub': '#A8C5C0'},
+    'mandu': {'bg': '#D4C4A0', 'accent': '#8B2500', 'text': '#2C2420', 'sub': '#C4956A'},
 }
 
 BOOKS = [
-    ('onui', '오누이\n이야기', '이억배 글 · 그림', '사계절출판사 · 2020'),
-    ('chuseok', '솔이의\n추석 이야기', '이억배 글 · 그림', '길벗어린이 · 1995'),
-    ('dmz', '비무장지대에\n봄이 오면', '이억배 글 · 그림', '사계절출판사 · 2010'),
-    ('rooster', '세상에서\n제일 힘센\n수탉', '이호백 글 · 이억배 그림', '재미마주 · 1997'),
-    ('story-pouch', '이야기\n주머니\n이야기', '이억배 글 · 그림', '보림 · 2007'),
     ('bomi', '봄이의\n여행', '이억배 글 · 그림', '이야기꽃 · 2019'),
-    ('mosquito', '모기와\n황소', '이억배 그림', '길벗어린이 · 2003'),
-    ('halfboy', '반쪽이', '이억배 그림', '길벗어린이 · 2005'),
+    ('halfboy', '반쪽이', '이미애 글 · 이억배 그림', '보림 · 1997'),
+    ('jaljaljal', '잘잘잘\n123', '이억배 글 · 그림', '사계절 · 2008'),
+    ('gaegujangi', '개구쟁이\nㄱㄴㄷ', '이억배 글 · 그림', '사계절 · 2005'),
+    ('mandu', '손 큰 할머니의\n만두 만들기', '채인선 글 · 이억배 그림', '재미마주 · 2001'),
 ]
 
 
