@@ -54,9 +54,9 @@ section { padding: 7rem 0; }
 /* About */
 #about { background: var(--color-bg-warm); }
 .about-grid { display: grid; grid-template-columns: 350px 1fr; gap: 4rem; align-items: start; }
-.portrait-frame { position: relative; aspect-ratio: 3/4; border: 1px solid var(--color-border); padding: 1rem; background: var(--color-bg); }
+.portrait-frame { position: relative; border: 1px solid var(--color-border); padding: 1rem; background: var(--color-bg); }
 .portrait-frame::before { content: ''; position: absolute; top: 8px; left: 8px; right: 8px; bottom: 8px; border: 1px solid var(--color-border); }
-.portrait-frame img { position: absolute; top: 1rem; left: 1rem; width: calc(100% - 2rem); height: calc(100% - 2rem); object-fit: cover; object-position: top center; z-index: 1; }
+.portrait-frame img { display: block; width: 100%; height: auto; position: relative; z-index: 1; }
 .about-lead { font-family: var(--font-serif); font-size: 1.2rem; line-height: 2; color: var(--color-ink); margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--color-border); }
 .about-text p { margin-bottom: 1rem; color: var(--color-ink-light); font-size: 0.95rem; }
 .about-stats { display: flex; gap: 3rem; margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--color-border); }
