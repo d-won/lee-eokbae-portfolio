@@ -8,10 +8,10 @@ const works = [
         category: 'tradition',
         tag: '전통 이야기',
         coverColor: '#D4B896',
-        isbn: '9788986621243',
+        isbn: '9788986621198',
         images: [
-            'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788986621243.jpg',
-            'https://image.aladin.co.kr/product/49/16/cover500/8986621246_1.jpg',
+            'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788986621198.jpg',
+            'https://image.aladin.co.kr/product/49/16/cover500/8986621193_1.jpg',
             'images/chuseok.jpg'
         ],
         shortDesc: '한국 창작그림책의 새 지평을 연 이억배 작가의 첫 번째 그림책.',
@@ -27,10 +27,10 @@ const works = [
         category: 'tradition',
         tag: '전통 이야기',
         coverColor: '#F0E6D3',
-        isbn: '9788986565034',
+        isbn: '9788986565041',
         images: [
-            'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788986565034.jpg',
-            'https://image.aladin.co.kr/product/24/72/cover500/8986565031_1.jpg',
+            'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788986565041.jpg',
+            'https://image.aladin.co.kr/product/24/72/cover500/8986565041_1.jpg',
             'images/rooster.jpg'
         ],
         shortDesc: '한국 최초 IBBY 우수도서로 선정된 그림책. BIB 선정작.',
@@ -65,10 +65,10 @@ const works = [
         category: 'tradition',
         tag: '전통 이야기',
         coverColor: '#C8BFA8',
-        isbn: '9788986621670',
+        isbn: '9788955820046',
         images: [
-            'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788986621670.jpg',
-            'https://image.aladin.co.kr/product/148/98/cover500/8986621673_1.jpg',
+            'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788955820046.jpg',
+            'https://image.aladin.co.kr/product/3994/92/cover500/8955820042_1.jpg',
             'images/mosquito.jpg'
         ],
         shortDesc: '작은 모기와 거대한 황소의 만남을 섬세한 필치로 그려낸 그림책.',
@@ -122,10 +122,10 @@ const works = [
         category: 'tradition',
         tag: '전통 이야기',
         coverColor: '#D8CDB8',
-        isbn: '9788984280793',
+        isbn: '9788943302634',
         images: [
-            'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788984280793.jpg',
-            'https://image.aladin.co.kr/product/574/18/cover500/8984280798_1.jpg',
+            'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788943302634.jpg',
+            'https://image.aladin.co.kr/product/574/18/cover500/8943302630_1.jpg',
             'images/halfboy.jpg'
         ],
         shortDesc: '몸이 반쪽인 아이의 성장을 통해 자기 긍정의 메시지를 전하는 전래동화 그림책.',
@@ -141,10 +141,10 @@ const works = [
         category: 'tradition',
         tag: '전통 이야기',
         coverColor: '#2C3E50',
-        isbn: '9788958283478',
+        isbn: '9788943307530',
         images: [
-            'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788958283478.jpg',
-            'https://image.aladin.co.kr/product/509/61/cover500/8958283476_1.jpg',
+            'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788943307530.jpg',
+            'https://image.aladin.co.kr/product/509/61/cover500/8943307530_1.jpg',
             'images/story-pouch.jpg'
         ],
         shortDesc: '이야기의 힘과 소중함을 담은 한국 전래 이야기 그림책.',
@@ -160,10 +160,10 @@ const works = [
         category: 'peace',
         tag: '평화',
         coverColor: '#8FB5A2',
-        isbn: '9788958284154',
+        isbn: '9788958284918',
         images: [
-            'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788958284154.jpg',
-            'https://image.aladin.co.kr/product/3628/2/cover500/8958284153_1.jpg',
+            'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788958284918.jpg',
+            'https://image.aladin.co.kr/product/3628/2/cover500/8958284918_1.jpg',
             'images/dmz.jpg'
         ],
         shortDesc: '분단의 땅 비무장지대에 찾아온 봄, 평화에 대한 염원을 담은 그림책.',
@@ -198,10 +198,10 @@ const works = [
         category: 'life',
         tag: '생활·학습',
         coverColor: '#808080',
-        isbn: '9788958287735',
+        isbn: '9791160946215',
         images: [
-            'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788958287735.jpg',
-            'https://image.aladin.co.kr/product/24841/23/cover500/8958287730_1.jpg',
+            'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791160946215.jpg',
+            'https://image.aladin.co.kr/product/30213/68/cover500/k902835238_1.jpg',
             'images/hanjang.jpg'
         ],
         shortDesc: '그림책의 세계를 한 장 한 장 펼쳐 보여주는 이억배 작가의 그림책.',
@@ -217,10 +217,10 @@ const works = [
         category: 'life',
         tag: '생활·학습',
         coverColor: '#5A7A8A',
-        isbn: '9788955610376',
+        isbn: '9788955617672',
         images: [
-            'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788955610376.jpg',
-            'https://image.aladin.co.kr/product/78/12/cover500/8955610374_1.jpg',
+            'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788955617672.jpg',
+            'https://image.aladin.co.kr/product/78/12/cover500/8955617670_1.jpg',
             'images/seagull.jpg'
         ],
         shortDesc: '약속을 지키기 위해 갈매기를 돌보는 고양이의 감동적인 이야기.',
@@ -236,10 +236,10 @@ const works = [
         category: 'peace',
         tag: '평화',
         coverColor: '#C4A56A',
-        isbn: '9791186050378',
+        isbn: '9788993843316',
         images: [
-            'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791186050378.jpg',
-            'https://image.aladin.co.kr/product/8990/86/cover500/k662534821_1.jpg',
+            'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788993843316.jpg',
+            'https://image.aladin.co.kr/product/3969/51/cover500/8993843317_1.jpg',
             'images/fivegeneration.jpg'
         ],
         shortDesc: '고은 시인의 시에 이억배 작가가 그림을 그린 그림책.',
