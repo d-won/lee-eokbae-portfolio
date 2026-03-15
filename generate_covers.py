@@ -13,19 +13,35 @@ W, H = 400, 533  # 3:4 aspect ratio
 
 # Korean traditional colors
 COLORS = {
-    'bomi': {'bg': '#6B9080', 'accent': '#F0E6D3', 'text': '#FFFFFF', 'sub': '#A8C5A0'},
-    'halfboy': {'bg': '#B8A590', 'accent': '#3C6E47', 'text': '#2C2420', 'sub': '#E8D5B7'},
+    'chuseok': {'bg': '#D4B896', 'accent': '#8B6914', 'text': '#3C2A1A', 'sub': '#A08050'},
+    'rooster': {'bg': '#F0E6D3', 'accent': '#8B2500', 'text': '#2C2420', 'sub': '#C4956A'},
+    'mandu': {'bg': '#E8E0D4', 'accent': '#2E8B57', 'text': '#2C2420', 'sub': '#C4956A'},
+    'mosquito': {'bg': '#C8BFA8', 'accent': '#8B4513', 'text': '#3C2A1A', 'sub': '#A08050'},
+    'gaegujangi': {'bg': '#7BAFD4', 'accent': '#1A3A5C', 'text': '#FFFFFF', 'sub': '#A8C5D0'},
     'jaljaljal': {'bg': '#E8D5B7', 'accent': '#8B4513', 'text': '#3C2A1A', 'sub': '#C4956A'},
-    'gaegujangi': {'bg': '#5A8A9A', 'accent': '#F0E6D3', 'text': '#FFFFFF', 'sub': '#A8C5C0'},
-    'mandu': {'bg': '#D4C4A0', 'accent': '#8B2500', 'text': '#2C2420', 'sub': '#C4956A'},
+    'halfboy': {'bg': '#D8CDB8', 'accent': '#3C6E47', 'text': '#2C2420', 'sub': '#A8B898'},
+    'story-pouch': {'bg': '#2C3E50', 'accent': '#E67E22', 'text': '#F0E6D3', 'sub': '#8E6B3E'},
+    'dmz': {'bg': '#8FB5A2', 'accent': '#2E5E4E', 'text': '#FFFFFF', 'sub': '#A8C5A0'},
+    'bomi': {'bg': '#C5B8A5', 'accent': '#4A6FA5', 'text': '#2C2420', 'sub': '#8CABD0'},
+    'hanjang': {'bg': '#808080', 'accent': '#D4A574', 'text': '#FFFFFF', 'sub': '#B0A090'},
+    'seagull': {'bg': '#5A7A8A', 'accent': '#E8D5B7', 'text': '#FFFFFF', 'sub': '#8AAABA'},
+    'fivegeneration': {'bg': '#C4A56A', 'accent': '#4A6FA5', 'text': '#2C2420', 'sub': '#8CABD0'},
 }
 
 BOOKS = [
-    ('bomi', '봄이의\n여행', '이억배 글 · 그림', '이야기꽃 · 2019'),
-    ('halfboy', '반쪽이', '이미애 글 · 이억배 그림', '보림 · 1997'),
-    ('jaljaljal', '잘잘잘\n123', '이억배 글 · 그림', '사계절 · 2008'),
-    ('gaegujangi', '개구쟁이\nㄱㄴㄷ', '이억배 글 · 그림', '사계절 · 2005'),
+    ('chuseok', '솔이의\n추석 이야기', '이억배 글 · 그림', '길벗어린이 · 1995'),
+    ('rooster', '세상에서 제일\n힘센 수탉', '이호백 글 · 이억배 그림', '재미마주 · 1997'),
     ('mandu', '손 큰 할머니의\n만두 만들기', '채인선 글 · 이억배 그림', '재미마주 · 2001'),
+    ('mosquito', '모기와\n황소', '현동염 글 · 이억배 그림', '길벗어린이 · 2003'),
+    ('gaegujangi', '개구쟁이\nㄱㄴㄷ', '이억배 글 · 그림', '사계절 · 2005'),
+    ('jaljaljal', '잘잘잘\n123', '이억배 글 · 그림', '사계절 · 2008'),
+    ('halfboy', '반쪽이', '이미애 글 · 이억배 그림', '보리 · 1997'),
+    ('story-pouch', '이야기 주머니\n이야기', '이억배 글 · 그림', '사계절 · 2009'),
+    ('dmz', '비무장지대에\n봄이 오면', '이억배 글 · 그림', '사계절 · 2010'),
+    ('bomi', '봄이의\n여행', '이억배 글 · 그림', '이야기꽃 · 2019'),
+    ('hanjang', '한 장 한 장\n그림책', '이억배 글 · 그림', '사계절 · 2020'),
+    ('seagull', '갈매기에게 나는 법을\n가르쳐준 고양이', '루이스 세뿔베다 글 · 이억배 그림', '바다출판사 · 2003'),
+    ('fivegeneration', '5대\n가족', '고은 시 · 이억배 그림', '바우솔 · 2016'),
 ]
 
 
@@ -67,9 +83,7 @@ def draw_brush_strokes(draw, w, h, color, count=5):
 def draw_border_frame(draw, w, h, color):
     """Draw a traditional Korean-style double border."""
     r, g, b = hex_to_rgb(color)
-    # Outer border
     draw.rectangle([(15, 15), (w-16, h-16)], outline=(r, g, b, 120), width=2)
-    # Inner border
     draw.rectangle([(25, 25), (w-26, h-26)], outline=(r, g, b, 80), width=1)
 
 
@@ -89,19 +103,11 @@ def create_cover(book_id, title, author, pub_info):
     img = Image.new('RGBA', (W, H), hex_to_rgb(colors['bg']) + (255,))
     draw = ImageDraw.Draw(img, 'RGBA')
 
-    # Hanji texture
     draw_hanji_texture(draw, W, H, colors['bg'])
-
-    # Border frame
     draw_border_frame(draw, W, H, colors['accent'])
-
-    # Circle motif
     draw_circle_motif(draw, W, H, colors['sub'])
-
-    # Brush strokes decoration
     draw_brush_strokes(draw, W, H, colors['sub'], count=7)
 
-    # Title text - try to use a system font, fallback to default
     try:
         title_font = ImageFont.truetype("/usr/share/fonts/truetype/noto/NotoSansCJK-Bold.ttc", 38)
     except (OSError, IOError):
@@ -126,7 +132,6 @@ def create_cover(book_id, title, author, pub_info):
         except (OSError, IOError):
             pub_font = ImageFont.load_default()
 
-    # Draw title
     lines = title.split('\n')
     y_start = int(H * 0.45)
     line_height = 50
@@ -137,20 +142,16 @@ def create_cover(book_id, title, author, pub_info):
         bbox = draw.textbbox((0, 0), line, font=title_font)
         tw = bbox[2] - bbox[0]
         x = (W - tw) // 2
-        # Shadow
         draw.text((x+2, y+2), line, fill=hex_to_rgb(colors['bg']), font=title_font)
-        # Main text
         draw.text((x, y), line, fill=hex_to_rgb(colors['text']), font=title_font)
         y += line_height
 
-    # Author
     y = int(H * 0.78)
     bbox = draw.textbbox((0, 0), author, font=author_font)
     tw = bbox[2] - bbox[0]
     x = (W - tw) // 2
     draw.text((x, y), author, fill=hex_to_rgb(colors['text']), font=author_font)
 
-    # Publisher
     y = int(H * 0.85)
     bbox = draw.textbbox((0, 0), pub_info, font=pub_font)
     tw = bbox[2] - bbox[0]
@@ -158,12 +159,10 @@ def create_cover(book_id, title, author, pub_info):
     r, g, b = hex_to_rgb(colors['sub'])
     draw.text((x, y), pub_info, fill=(r, g, b, 200), font=pub_font)
 
-    # Decorative line under author
     line_y = int(H * 0.82)
     ar, ag, ab = hex_to_rgb(colors['accent'])
     draw.line([(W//2-40, line_y), (W//2+40, line_y)], fill=(ar, ag, ab, 100), width=1)
 
-    # Save as PNG (convert RGBA to RGB)
     rgb_img = Image.new('RGB', img.size, (255, 255, 255))
     rgb_img.paste(img, mask=img.split()[3])
     out_path = os.path.join(IMG_DIR, f'{book_id}.jpg')
@@ -177,20 +176,14 @@ def create_author_portrait():
     img = Image.new('RGBA', (w, h), (240, 230, 211, 255))
     draw = ImageDraw.Draw(img, 'RGBA')
 
-    # Hanji texture
     draw_hanji_texture(draw, w, h, '#F0E6D3')
-
-    # Border
     draw.rectangle([(10, 10), (w-11, h-11)], outline=(139, 69, 19, 80), width=2)
     draw.rectangle([(18, 18), (w-19, h-19)], outline=(139, 69, 19, 40), width=1)
 
-    # Person silhouette (head)
     cx, cy = w//2, int(h*0.32)
     head_r = 55
     draw.ellipse([(cx-head_r, cy-head_r), (cx+head_r, cy+head_r)],
                  fill=(180, 160, 140, 60), outline=(139, 69, 19, 60), width=2)
-
-    # Body silhouette
     draw.arc([(cx-85, cy+40), (cx+85, cy+170)], 0, 180,
              fill=(139, 69, 19, 50), width=2)
 
@@ -210,19 +203,16 @@ def create_author_portrait():
         except (OSError, IOError):
             sub_font = ImageFont.load_default()
 
-    # Name
     name = "이억배"
     bbox = draw.textbbox((0, 0), name, font=name_font)
     tw = bbox[2] - bbox[0]
     draw.text(((w-tw)//2, int(h*0.62)), name, fill=(60, 42, 26), font=name_font)
 
-    # Subtitle
     sub = "그림책 작가 · 1960~"
     bbox = draw.textbbox((0, 0), sub, font=sub_font)
     tw = bbox[2] - bbox[0]
     draw.text(((w-tw)//2, int(h*0.72)), sub, fill=(139, 69, 19, 180), font=sub_font)
 
-    # Brush stroke decoration
     for i in range(3):
         x = w//2 - 30 + i*30
         y = int(h*0.80)
@@ -237,7 +227,6 @@ def create_author_portrait():
 
 
 if __name__ == '__main__':
-    # Check for Korean fonts
     font_dirs = ['/usr/share/fonts/truetype/', '/usr/share/fonts/opentype/', '/usr/share/fonts/']
     print("Searching for Korean fonts...")
     for fd in font_dirs:
