@@ -10,8 +10,6 @@ const works = [
         coverColor: '#D4B896',
         isbn: '9788986621198',
         images: [
-            'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788986621198.jpg',
-            'https://image.aladin.co.kr/product/49/16/cover500/8986621193_1.jpg',
             'images/chuseok.jpg'
         ],
         shortDesc: '한국 창작그림책의 새 지평을 연 이억배 작가의 첫 번째 그림책.',
@@ -29,8 +27,6 @@ const works = [
         coverColor: '#F0E6D3',
         isbn: '9788986565041',
         images: [
-            'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788986565041.jpg',
-            'https://image.aladin.co.kr/product/24/72/cover500/8986565041_1.jpg',
             'images/rooster.jpg'
         ],
         shortDesc: '한국 최초 IBBY 우수도서로 선정된 그림책. BIB 선정작.',
@@ -48,8 +44,6 @@ const works = [
         coverColor: '#E8E0D4',
         isbn: '9788986565065',
         images: [
-            'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788986565065.jpg',
-            'https://image.aladin.co.kr/product/831/27/cover500/8986565064_1.jpg',
             'images/mandu.jpg'
         ],
         shortDesc: '손 큰 할머니가 숲속 동물들과 함께 설날 만두를 만드는 따뜻한 이야기.',
@@ -67,8 +61,6 @@ const works = [
         coverColor: '#C8BFA8',
         isbn: '9788955820046',
         images: [
-            'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788955820046.jpg',
-            'https://image.aladin.co.kr/product/3994/92/cover500/8955820042_1.jpg',
             'images/mosquito.jpg'
         ],
         shortDesc: '작은 모기와 거대한 황소의 만남을 섬세한 필치로 그려낸 그림책.',
@@ -86,8 +78,6 @@ const works = [
         coverColor: '#7BAFD4',
         isbn: '9788958280828',
         images: [
-            'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788958280828.jpg',
-            'https://image.aladin.co.kr/product/5558/41/cover500/8958280824_1.jpg',
             'images/gaegujangi.jpg'
         ],
         shortDesc: '개구쟁이 아이의 하루 이야기 속에 한글 닿소리 14자를 담은 그림책.',
@@ -105,8 +95,6 @@ const works = [
         coverColor: '#E8D5B7',
         isbn: '9788958282792',
         images: [
-            'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788958282792.jpg',
-            'https://image.aladin.co.kr/product/19611/48/cover500/8958282797_1.jpg',
             'images/jaljaljal.jpg'
         ],
         shortDesc: '우리나라 전래동요 "잘잘잘"을 유아들을 위해 새롭게 편집한 수 놀이 그림책.',
@@ -124,8 +112,6 @@ const works = [
         coverColor: '#D8CDB8',
         isbn: '9788943302634',
         images: [
-            'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788943302634.jpg',
-            'https://image.aladin.co.kr/product/574/18/cover500/8943302630_1.jpg',
             'images/halfboy.jpg'
         ],
         shortDesc: '몸이 반쪽인 아이의 성장을 통해 자기 긍정의 메시지를 전하는 전래동화 그림책.',
@@ -143,8 +129,6 @@ const works = [
         coverColor: '#2C3E50',
         isbn: '9788943307530',
         images: [
-            'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788943307530.jpg',
-            'https://image.aladin.co.kr/product/509/61/cover500/8943307530_1.jpg',
             'images/story-pouch.jpg'
         ],
         shortDesc: '이야기의 힘과 소중함을 담은 한국 전래 이야기 그림책.',
@@ -162,8 +146,6 @@ const works = [
         coverColor: '#8FB5A2',
         isbn: '9788958284918',
         images: [
-            'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788958284918.jpg',
-            'https://image.aladin.co.kr/product/3628/2/cover500/8958284918_1.jpg',
             'images/dmz.jpg'
         ],
         shortDesc: '분단의 땅 비무장지대에 찾아온 봄, 평화에 대한 염원을 담은 그림책.',
@@ -181,8 +163,6 @@ const works = [
         coverColor: '#C5B8A5',
         isbn: '9788998751425',
         images: [
-            'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788998751425.jpg',
-            'https://image.aladin.co.kr/product/1960149/44/cover500/8998751429_1.jpg',
             'images/bomi.jpg'
         ],
         shortDesc: '분단의 현실 속에서 꽃 피는 한반도의 꿈을 담은 그림책.',
@@ -200,8 +180,6 @@ const works = [
         coverColor: '#808080',
         isbn: '9791160946215',
         images: [
-            'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791160946215.jpg',
-            'https://image.aladin.co.kr/product/30213/68/cover500/k902835238_1.jpg',
             'images/hanjang.jpg'
         ],
         shortDesc: '그림책의 세계를 한 장 한 장 펼쳐 보여주는 이억배 작가의 그림책.',
@@ -219,8 +197,6 @@ const works = [
         coverColor: '#5A7A8A',
         isbn: '9788955617672',
         images: [
-            'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788955617672.jpg',
-            'https://image.aladin.co.kr/product/78/12/cover500/8955617670_1.jpg',
             'images/seagull.jpg'
         ],
         shortDesc: '약속을 지키기 위해 갈매기를 돌보는 고양이의 감동적인 이야기.',
@@ -238,8 +214,6 @@ const works = [
         coverColor: '#C4A56A',
         isbn: '9788993843316',
         images: [
-            'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788993843316.jpg',
-            'https://image.aladin.co.kr/product/3969/51/cover500/8993843317_1.jpg',
             'images/fivegeneration.jpg'
         ],
         shortDesc: '고은 시인의 시에 이억배 작가가 그림을 그린 그림책.',
